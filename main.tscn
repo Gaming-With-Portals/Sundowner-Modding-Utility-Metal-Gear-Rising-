@@ -1,0 +1,529 @@
+[gd_scene load_steps=12 format=3 uid="uid://bm2whobn2mf0b"]
+
+[ext_resource type="Texture2D" uid="uid://w03c25pew4hh" path="res://assets/gwp.png" id="1_ntkl4"]
+[ext_resource type="Texture2D" uid="uid://vjc2qgk4dohc" path="res://assets/des_logo_new.webp.png" id="1_tofyc"]
+[ext_resource type="Script" path="res://main.gd" id="1_wiy3b"]
+[ext_resource type="Script" path="res://bg.gd" id="2_cdolp"]
+[ext_resource type="FontFile" uid="uid://cel4nq4fx2mhx" path="res://techno_hideo.ttf" id="3_ixrvi"]
+[ext_resource type="Texture2D" uid="uid://lf0b7abc7vpn" path="res://assets/newerbg.png" id="4_8yy6m"]
+[ext_resource type="Script" path="res://menu_directory_explorer.gd" id="7_2stes"]
+[ext_resource type="Texture2D" uid="uid://c3rb4dqtotrvj" path="res://assets/ember.png" id="7_agilh"]
+[ext_resource type="PackedScene" uid="uid://biitjvltosd8d" path="res://scenes/file.tscn" id="7_htavl"]
+[ext_resource type="Script" path="res://about.gd" id="7_ub6am"]
+[ext_resource type="FontFile" uid="uid://dne2fc1los10l" path="res://assets/conthrax-sb.otf" id="10_1e8ur"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wiy3b")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 656.0
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+script = ExtResource("2_cdolp")
+
+[node name="TextureRect2" type="TextureRect" parent="bg"]
+self_modulate = Color(1, 1, 1, 0.14902)
+layout_mode = 0
+offset_left = 381.0
+offset_top = 236.0
+offset_right = 741.0
+offset_bottom = 536.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_tofyc")
+
+[node name="bg_001" type="TextureRect" parent="bg"]
+self_modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 0
+offset_left = 1178.0
+offset_top = 651.0
+offset_right = 3257.0
+offset_bottom = 1855.0
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_8yy6m")
+
+[node name="TextureRect" type="TextureRect" parent="bg"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 481.0
+offset_bottom = 379.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_ntkl4")
+
+[node name="divider6" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 644.0
+offset_right = 1154.0
+offset_bottom = 650.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider5" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 39.0
+offset_right = 1149.0
+offset_bottom = 45.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider4" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = -3.0
+offset_right = 2304.0
+offset_bottom = 3.0
+rotation = 1.5708
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider3" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 1157.0
+offset_bottom = 17.0
+rotation = 1.5708
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = 197.0
+offset_right = 202.0
+offset_bottom = 657.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider2" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_left = -52.0
+offset_top = 143.0
+offset_right = 202.0
+offset_bottom = 149.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="Label" type="Label" parent="bg"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 59.0
+offset_right = 200.0
+offset_bottom = 120.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ixrvi")
+theme_override_font_sizes/font_size = 25
+text = "SUNDOWNER 
+MODDING
+UTILITY"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="bg"]
+position = Vector2(-417, 325)
+scale = Vector2(0.799542, 0.349498)
+amount = 80
+lifetime = 4.0
+texture = ExtResource("7_agilh")
+spread = 35.65
+gravity = Vector2(0, 0)
+initial_velocity_min = 561.45
+initial_velocity_max = 561.45
+angle_min = 193.8
+angle_max = 193.8
+scale_amount_min = 0.3
+scale_amount_max = 0.3
+color = Color(1, 0, 0, 1)
+
+[node name="right_pane" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 202.0
+offset_top = 39.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="menu_000" type="Control" parent="right_pane"]
+anchors_preset = 0
+offset_right = 951.0
+offset_bottom = 650.0
+
+[node name="Label" type="RichTextLabel" parent="right_pane/menu_000"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.5
+offset_top = -66.0
+offset_right = 451.5
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("10_1e8ur")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]DRAG ANY
+[color=#FF0000]METAL GEAR RISING DATA FILE[/color] 
+INTO THIS PANE TO BEGIN[/center]"
+autowrap_mode = 0
+
+[node name="drag_n_drop_2" type="Control" parent="right_pane"]
+visible = false
+anchors_preset = 0
+offset_right = 951.0
+offset_bottom = 650.0
+
+[node name="Label2" type="Label" parent="right_pane/drag_n_drop_2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -470.5
+offset_top = -310.0
+offset_right = 307.5
+offset_bottom = -272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("3_ixrvi")
+theme_override_font_sizes/font_size = 60
+text = "REPLACE OR ADD FILES"
+
+[node name="Label" type="RichTextLabel" parent="right_pane/drag_n_drop_2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.5
+offset_top = -66.0
+offset_right = 451.5
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("10_1e8ur")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]DRAG AND DROP YOUR FILE INTO
+THIS PANE[/center]"
+autowrap_mode = 0
+
+[node name="menu_settings" type="Control" parent="right_pane"]
+visible = false
+anchors_preset = 0
+offset_right = 951.0
+offset_bottom = 650.0
+
+[node name="Label2" type="Label" parent="right_pane/menu_settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -468.5
+offset_top = -312.0
+offset_right = 291.5
+offset_bottom = -274.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("3_ixrvi")
+theme_override_font_sizes/font_size = 60
+text = "CONFIGURATION"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="right_pane/menu_settings"]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 723.0
+offset_bottom = 606.0
+
+[node name="forceeasy" type="CheckButton" parent="right_pane/menu_settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "FORCE EASY TO READ FONT "
+icon_alignment = 1
+expand_icon = true
+
+[node name="simplecolors" type="CheckButton" parent="right_pane/menu_settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "SIMPLE COLORS INTERFACE"
+icon_alignment = 1
+expand_icon = true
+
+[node name="disablevfx" type="CheckButton" parent="right_pane/menu_settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "DISABLE VFX"
+icon_alignment = 1
+expand_icon = true
+
+[node name="save" type="Button" parent="right_pane/menu_settings"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 562.0
+offset_right = 147.0
+offset_bottom = 595.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "SAVE SETTINGS"
+alignment = 0
+
+[node name="menu_directory_explorer" type="Control" parent="right_pane"]
+visible = false
+anchors_preset = 0
+offset_right = 951.0
+offset_bottom = 650.0
+script = ExtResource("7_2stes")
+
+[node name="Label" type="Label" parent="right_pane/menu_directory_explorer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -468.5
+offset_top = -312.0
+offset_right = 291.5
+offset_bottom = -274.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("3_ixrvi")
+theme_override_font_sizes/font_size = 60
+text = "Data Explorer"
+
+[node name="File_Copy" parent="right_pane/menu_directory_explorer" instance=ExtResource("7_htavl")]
+custom_minimum_size = Vector2(0, 41)
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 666.0
+offset_top = -147.0
+offset_right = 1611.0
+offset_bottom = -107.0
+
+[node name="FileList" type="ScrollContainer" parent="right_pane/menu_directory_explorer"]
+layout_mode = 0
+offset_top = 92.0
+offset_right = 945.0
+offset_bottom = 606.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="right_pane/menu_directory_explorer/FileList"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="right_pane/menu_directory_explorer"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 51.0
+offset_right = 939.0
+offset_bottom = 92.0
+theme_override_colors/font_outline_color = Color(0.605674, 1.66051e-06, 3.85046e-07, 0.439216)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 26
+placeholder_text = "Search"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+
+[node name="datinfo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 154.0
+offset_right = 197.0
+offset_bottom = 679.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "FILE INFO:"
+horizontal_alignment = 1
+
+[node name="toolbar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="toolbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Label" type="Label" parent="toolbar/ColorRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -12.5
+offset_right = 8.0
+offset_bottom = 17.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ixrvi")
+theme_override_font_sizes/font_size = 45
+text = "VER. 1 "
+horizontal_alignment = 2
+
+[node name="buttonscontainer" type="HBoxContainer" parent="toolbar/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 987.0
+offset_bottom = 40.0
+
+[node name="file" type="Button" parent="toolbar/ColorRect/buttonscontainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "SAVE TO DAT"
+
+[node name="ColorRect" type="ColorRect" parent="toolbar/ColorRect/buttonscontainer"]
+custom_minimum_size = Vector2(4.845, 0)
+layout_mode = 2
+color = Color(1, 0, 0, 0.439216)
+
+[node name="view" type="Button" parent="toolbar/ColorRect/buttonscontainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "VIEW"
+
+[node name="ColorRect2" type="ColorRect" parent="toolbar/ColorRect/buttonscontainer"]
+custom_minimum_size = Vector2(4.845, 0)
+layout_mode = 2
+color = Color(1, 0, 0, 0.439216)
+
+[node name="settings" type="Button" parent="toolbar/ColorRect/buttonscontainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "SETTINGS"
+
+[node name="ColorRect3" type="ColorRect" parent="toolbar/ColorRect/buttonscontainer"]
+custom_minimum_size = Vector2(4.845, 0)
+layout_mode = 2
+color = Color(1, 0, 0, 0.439216)
+
+[node name="about" type="Button" parent="toolbar/ColorRect/buttonscontainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "ABOUT"
+script = ExtResource("7_ub6am")
+
+[node name="view_drop_down" type="Control" parent="toolbar/ColorRect"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bg" type="ColorRect" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 47.0
+offset_right = 370.0
+offset_bottom = 78.0
+color = Color(0.27451, 0, 0, 1)
+
+[node name="directory" type="Button" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 45.0
+offset_right = 365.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0, 0.294118)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("10_1e8ur")
+theme_override_font_sizes/font_size = 20
+text = "DIRECTORY"
+
+[node name="divider7" type="ColorRect" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 77.0
+offset_right = 370.0
+offset_bottom = 83.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider10" type="ColorRect" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 41.0
+offset_right = 370.0
+offset_bottom = 47.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider8" type="ColorRect" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 46.0
+offset_right = 370.0
+offset_bottom = 77.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="divider9" type="ColorRect" parent="toolbar/ColorRect/view_drop_down"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 45.0
+offset_right = 190.0
+offset_bottom = 77.0
+color = Color(0.658824, 0, 0, 1)
+
+[connection signal="pressed" from="right_pane/menu_settings/save" to="." method="_on_save_pressed"]
+[connection signal="text_submitted" from="right_pane/menu_directory_explorer/LineEdit" to="right_pane/menu_directory_explorer" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="toolbar/ColorRect/buttonscontainer/file" to="." method="_on_file_pressed"]
+[connection signal="pressed" from="toolbar/ColorRect/buttonscontainer/view" to="." method="_on_view_pressed"]
+[connection signal="pressed" from="toolbar/ColorRect/buttonscontainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="toolbar/ColorRect/buttonscontainer/about" to="toolbar/ColorRect/buttonscontainer/about" method="_on_pressed"]
+[connection signal="pressed" from="toolbar/ColorRect/view_drop_down/directory" to="." method="_on_directory_pressed"]

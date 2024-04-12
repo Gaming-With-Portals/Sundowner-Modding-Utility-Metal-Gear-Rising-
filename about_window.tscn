@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkqx0xl83loxy"]
+
+[ext_resource type="FontFile" uid="uid://cel4nq4fx2mhx" path="res://techno_hideo.ttf" id="1_nagir"]
+[ext_resource type="Script" path="res://about_window.gd" id="1_rase8"]
+[ext_resource type="Texture2D" uid="uid://vjc2qgk4dohc" path="res://assets/des_logo_new.webp.png" id="2_5athd"]
+[ext_resource type="Texture2D" uid="uid://dywdx6hwt17tf" path="res://bg.png" id="3_wyitn"]
+[ext_resource type="Texture2D" uid="uid://w03c25pew4hh" path="res://assets/gwp.png" id="4_o6q7q"]
+
+[node name="AboutWindow" type="Window"]
+position = Vector2i(0, 36)
+size = Vector2i(660, 420)
+script = ExtResource("1_rase8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bg" type="ColorRect" parent="Control"]
+offset_right = 1153.0
+offset_bottom = 656.0
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.14902)
+offset_left = 381.0
+offset_top = 236.0
+offset_right = 741.0
+offset_bottom = 536.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_5athd")
+
+[node name="bg_001" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.447059)
+offset_left = 1191.0
+offset_top = 651.0
+offset_right = 2438.31
+offset_bottom = 1451.0
+rotation = 3.14159
+texture = ExtResource("3_wyitn")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+offset_left = -26.83
+offset_top = -60.24
+offset_right = 453.17
+offset_bottom = 299.76
+scale = Vector2(1.835, 1.835)
+texture = ExtResource("4_o6q7q")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 5.53
+offset_top = 9.655
+offset_right = 601.53
+offset_bottom = 70.655
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_nagir")
+theme_override_font_sizes/font_size = 38
+text = "SUNDOWNER MODDING UTILITY"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 5.53
+offset_top = 37.6
+offset_right = 601.53
+offset_bottom = 98.5999
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_nagir")
+theme_override_font_sizes/font_size = 32
+text = "By Gaming with Portals"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
